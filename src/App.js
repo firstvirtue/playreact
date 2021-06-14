@@ -1,31 +1,50 @@
 import logo from './logo.svg';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
 
+  const [hidden, setHidden] = useState(true);
+
   useEffect(() => {
     window.sendMessage = (type, param) => {
       console.log('유휴!', type, param);
+      setHidden(false);
     }
   }, []);
 
+  const onClick = (e) => {
+    setHidden(true);
+  }
+
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      {
+        hidden ? null
+            :
+        <div className="layer">
+          <button className="btn-close" onClick={onClick}>닫기</button>
+          <div className="container">
+            <div className="slider">
+              {/* [TODO] 슬라이더 */}
+              {/* [TODO] 제품박스 */}
+              {/*<video src="https://dev.does.kr/test/bandai-gundam/bandai_gundam_360_02.mp4" autoPlay={true} loop={true} playsInline={true} muted={true}></video>*/}
+            </div>
+
+            <div className="content">
+              <h2 className="title">[메탈빌드] 엑시아 리페어 4</h2>
+              <div className="rating"></div>
+              <div className="price-wrap">
+                <div className=""></div>
+                <div className="price">240,000<span>원</span></div>
+                <div className="discount">20%</div>
+              </div>
+              <div className="total-price"></div>
+              <a href="#" target="_blank" rel="noopener noreferer nofollow">구매하러 가기</a>
+            </div>
+          </div>
+        </div>
+      }
     </div>
   );
 }

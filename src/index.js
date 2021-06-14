@@ -4,10 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-window.addEventListener('meesage', (e) => {
-  console.log(e.data);
-});
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
