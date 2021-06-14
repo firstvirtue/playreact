@@ -28,6 +28,7 @@ function App() {
             <div className="slider">
               {/* [TODO] 슬라이더 */}
               {/* [TODO] 제품박스 */}
+              <iframe src="https://test.bandainamcomall.co.kr/iframe_360/box_3d_preview.html?image=rg_force_impulse_gundam_PAC_"></iframe>
               {/*<video src="https://dev.does.kr/test/bandai-gundam/bandai_gundam_360_02.mp4" autoPlay={true} loop={true} playsInline={true} muted={true}></video>*/}
             </div>
 
@@ -40,7 +41,7 @@ function App() {
                 <div className="discount">20%</div>
               </div>
               <div className="total-price"></div>
-              <a href="#" target="_blank" rel="noopener noreferer nofollow">구매하러 가기</a>
+              <a href="https://test.bandainamcomall.co.kr/coding/goods_detail.html" target="_blank" rel="noopener noreferer nofollow">구매하러 가기</a>
             </div>
           </div>
         </div>
