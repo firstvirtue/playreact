@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import { useState, useEffect } from 'react';
 import './App.css';
+import './app.scss';
 
 function App() {
 
+  // ### STATE
   const [hidden, setHidden] = useState(true);
 
   useEffect(() => {
@@ -13,6 +15,7 @@ function App() {
     }
   }, []);
 
+  // ### EVENT
   const onClick = (e) => {
     setHidden(true);
   }
